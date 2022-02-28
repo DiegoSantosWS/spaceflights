@@ -1,0 +1,74 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+companies:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/companies.csv
+  layer: raw
+
+reviews:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/reviews.csv
+  layer: raw
+  
+shuttles:
+  type: pandas.ExcelDataSet
+  filepath: data/01_raw/shuttles.xlsx
+  layer: raw
+
+preprocessed_companies:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_companies.csv
+  layer: intermediate
+
+preprocessed_shuttles:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_shuttles.csv
+  layer: intermediate
+
+model_input_table:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/model_input_table.csv
+  layer: primary
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+  versioned: true
+  layer: models
+
+# shuttle_speed_comparison_plot:
+#   type: plotly.PlotlyDataSet
+#   filepath: data/08_reporting/shuttle_speed_comparison_plot.json
+#   plotly_args:
+#     type: bar
+#     fig:
+#       x: shuttle_name
+#       y: shuttle_speed
+#       orientation: h
+#     layout:
+#       xaxis_title: Shuttles
+#       yaxis_title: Shuttle Speed (km/hr)
+#       title: Shuttle Speed Comaprison
+
+active_modelling_pipeline.regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_active.pickle
+  versioned: true
+  layer: models
+
+candidate_modelling_pipeline.regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_candidate.pickle
+  versioned: true
+  layer: models
+
+metrics:
+  type: tracking.MetricsDataSet
+  filepath: data/09_tracking/metrics.json
+
+companies_columns:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/companies_columns.json
