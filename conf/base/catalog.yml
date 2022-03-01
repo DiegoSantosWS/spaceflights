@@ -35,12 +35,6 @@ model_input_table:
   filepath: data/03_primary/model_input_table.pq
   layer: primary
 
-regressor:
-  type: pickle.PickleDataSet
-  filepath: data/06_models/regressor.pickle
-  versioned: true
-  layer: models
-
 active_modelling_pipeline.regressor:
   type: pickle.PickleDataSet
   filepath: data/06_models/regressor_active.pickle
@@ -56,9 +50,7 @@ candidate_modelling_pipeline.regressor:
 metrics:
   type: tracking.MetricsDataSet
   filepath: data/09_tracking/metrics.json
-  versioned: true
 
 companies_columns:
   type: tracking.JSONDataSet
   filepath: data/09_tracking/companies_columns.json
-  versioned: true

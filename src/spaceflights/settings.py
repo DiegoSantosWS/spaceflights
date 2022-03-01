@@ -22,4 +22,4 @@ SESSION_STORE_ARGS = {
 # CONTEXT_CLASS = KedroContext
 
 # Define the configuration folder. Defaults to `conf`
-# CONF_ROOT = "conf"
+CONF_ROOT = "conf"

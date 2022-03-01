@@ -5,9 +5,7 @@ generated using Kedro 0.17.7
 
 from kedro.pipeline import Pipeline, node, pipeline
 
-from spaceflights.pipelines.data_processing.nodes import evaluate_model, split_data, train_model
-
-# from .nodes import evaluate_model, split_data, train_model
+from .nodes import evaluate_model, split_data, train_model
 
 
 def create_pipeline(**kwargs) -> Pipeline:
