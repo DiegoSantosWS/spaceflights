@@ -2,6 +2,7 @@
 from pathlib import Path
 from spaceflights.hooks import ProjectHooks
 from kedro_viz.integrations.kedro.sqlite_store import SQLiteStore
+# from kedro.framework.session.store import ShelveStore
 
 # Instantiate and list your project hooks here
 HOOKS = (ProjectHooks(),)
@@ -17,7 +18,6 @@ SESSION_STORE_CLASS = SQLiteStore
 SESSION_STORE_ARGS = {
     "path": str(Path(__file__).parents[2] / "data")
 }
-print(SESSION_STORE_ARGS)
 # Define custom context class. Defaults to `KedroContext`
 # CONTEXT_CLASS = KedroContext
 

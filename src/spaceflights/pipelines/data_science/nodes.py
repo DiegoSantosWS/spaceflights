@@ -4,15 +4,12 @@ generated using Kedro 0.17.7
 """
 
 import logging
-from statistics import mean
 from typing import Dict, Tuple
 
 import pandas as pd
-import plotly.express as px
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_absolute_error, max_error
 from sklearn.model_selection import train_test_split
-from kedro.extras.datasets.plotly import JSONDataSet
 
 
 def split_data(data: pd.DataFrame, parameters: Dict) -> Tuple:
@@ -61,10 +58,6 @@ def evaluate_model(regressor: LinearRegression, X_test: pd.DataFrame, y_test: pd
     me = max_error(y_test, y_pred)
     logger = logging.getLogger(__name__)
     logger.info("Model has a coefficient R^2 of %.3f on test data.", score)
+    
     return {"r2_score": score, "mae": mae, "max_error": me}
-
-
-def compare_shuttle_speed(shuttle_data):
-    fig = px.bar(x=shuttle_data.name, y=shuttle_data.speed)
-    return fig
 

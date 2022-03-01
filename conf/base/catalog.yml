@@ -17,20 +17,22 @@ shuttles:
   type: pandas.ExcelDataSet
   filepath: data/01_raw/shuttles.xlsx
   layer: raw
+  load_args:
+    engine: openpyxl
 
 preprocessed_companies:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/preprocessed_companies.csv
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_companies.pq
   layer: intermediate
 
 preprocessed_shuttles:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/preprocessed_shuttles.csv
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_shuttles.pq
   layer: intermediate
 
 model_input_table:
-  type: pandas.CSVDataSet
-  filepath: data/03_primary/model_input_table.csv
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/model_input_table.pq
   layer: primary
 
 regressor:
@@ -38,20 +40,6 @@ regressor:
   filepath: data/06_models/regressor.pickle
   versioned: true
   layer: models
-
-# shuttle_speed_comparison_plot:
-#   type: plotly.PlotlyDataSet
-#   filepath: data/08_reporting/shuttle_speed_comparison_plot.json
-#   plotly_args:
-#     type: bar
-#     fig:
-#       x: shuttle_name
-#       y: shuttle_speed
-#       orientation: h
-#     layout:
-#       xaxis_title: Shuttles
-#       yaxis_title: Shuttle Speed (km/hr)
-#       title: Shuttle Speed Comaprison
 
 active_modelling_pipeline.regressor:
   type: pickle.PickleDataSet
@@ -68,7 +56,9 @@ candidate_modelling_pipeline.regressor:
 metrics:
   type: tracking.MetricsDataSet
   filepath: data/09_tracking/metrics.json
+  versioned: true
 
 companies_columns:
   type: tracking.JSONDataSet
   filepath: data/09_tracking/companies_columns.json
+  versioned: true

@@ -8,7 +8,7 @@ jupyter~=1.0
 jupyter_client>=5.1, <7.0
 jupyterlab~=3.0
 # kedro==0.17.7
-kedro[pandas.CSVDataSet, pandas.ExcelDataSet, pandas.ParquetDataSet, plotly.PlotlyDataSet, plotly.JSONDataSet]==0.17.7
+kedro[pandas.CSVDataSet, pandas.ExcelDataSet, pandas.ParquetDataSet, tracking.MetricsDataSet, tracking.JSONDataSet, plotly.PlotlyDataSet, plotly.JSONDataSet]==0.17.7
 openpyxl>=3.0.6, <4.0
 kedro-telemetry~=0.1.0
 nbstripout~=0.4

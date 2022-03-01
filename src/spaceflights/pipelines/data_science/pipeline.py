@@ -4,9 +4,10 @@ generated using Kedro 0.17.7
 """
 
 from kedro.pipeline import Pipeline, node, pipeline
-from sqlalchemy import func
 
-from .nodes import evaluate_model, split_data, train_model
+from spaceflights.pipelines.data_processing.nodes import evaluate_model, split_data, train_model
+
+# from .nodes import evaluate_model, split_data, train_model
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -31,11 +32,6 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="evaluate_model_node",
                 outputs="metrics",
             ),
-            # node(
-            #     func=compare_shuttle_speed,
-            #     inputs="shuttle_speed_data",
-            #     outputs="shuttle_speed_comparison_plot",
-            # ),
         ]
     )
     
