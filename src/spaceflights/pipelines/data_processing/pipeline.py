@@ -37,5 +37,5 @@ def create_pipeline(**kwargs) -> Pipeline:
         
         namespace="data_processing",
         inputs=["companies", "shuttles", "reviews"],
-        outputs="model_input_table",
+        outputs=["model_input_table","preprocessed_shuttles","preprocessed_companies", "companies_columns"],
     )

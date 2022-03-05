@@ -30,13 +30,16 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="evaluate_model_node",
                 outputs="metrics",
             ),
-        ]
+        ],
+        
+        outputs=["regressor", "metrics"],
     )
     
     ds_pipeline_one = pipeline(
         pipe=pipeline_instance,
         inputs="model_input_table",
         namespace="active_modelling_pipeline",
+        outputs="metrics",
     )
     
     ds_pipeline_two = pipeline(
@@ -50,5 +53,6 @@ def create_pipeline(**kwargs) -> Pipeline:
         pipe=ds_pipeline_one + ds_pipeline_two,
         inputs="model_input_table",
         namespace="data_science",
+        outputs="metrics",
     )
     
