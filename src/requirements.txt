@@ -29,7 +29,7 @@ backcall==0.2.0
 binaryornot==0.4.4
     # via cookiecutter
 black==21.5b1
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 bleach==4.1.0
     # via nbconvert
 cachetools==4.2.4
@@ -68,7 +68,7 @@ entrypoints==0.4
 et-xmlfile==1.1.0
     # via openpyxl
 flake8==3.9.2
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 fsspec==2022.1.0
     # via kedro
 gitdb==4.0.9
@@ -92,7 +92,7 @@ ipykernel==6.9.1
     #   qtconsole
 ipython==7.32.0 ; python_version > "3.6"
     # via
-    #   -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    #   -r requirements.in
     #   ipykernel
     #   ipywidgets
     #   jupyter-console
@@ -107,7 +107,7 @@ ipython-genutils==0.2.0
 ipywidgets==7.6.5
     # via jupyter
 isort==5.10.1
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 jedi==0.18.1
     # via ipython
 jinja2==3.0.3
@@ -123,7 +123,7 @@ jinja2-time==0.2.0
     # via cookiecutter
 jmespath==0.10.0
     # via kedro
-joblib==1.1.0
+joblib==1.2.0
     # via scikit-learn
 json5==0.9.6
     # via jupyterlab-server
@@ -132,10 +132,10 @@ jsonschema==4.4.0
     #   jupyterlab-server
     #   nbformat
 jupyter==1.0.0
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 jupyter-client==6.1.12
     # via
-    #   -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    #   -r requirements.in
     #   ipykernel
     #   jupyter-console
     #   jupyter-server
@@ -160,7 +160,7 @@ jupyter-server==1.13.5
     #   jupyterlab-server
     #   nbclassic
 jupyterlab==3.2.9
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 jupyterlab-pygments==0.1.2
     # via nbconvert
 jupyterlab-server==2.10.3
@@ -169,10 +169,10 @@ jupyterlab-widgets==1.0.2
     # via ipywidgets
 kedro[pandas.csvdataset,pandas.exceldataset,pandas.parquetdataset]==0.17.7
     # via
-    #   -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    #   -r requirements.in
     #   kedro-telemetry
 kedro-telemetry==0.1.3
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 markupsafe==2.1.0
     # via jinja2
 matplotlib-inline==0.1.3
@@ -203,7 +203,7 @@ nbformat==5.1.3
     #   nbstripout
     #   notebook
 nbstripout==0.5.0
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 nest-asyncio==1.5.4
     # via
     #   ipykernel
@@ -221,7 +221,7 @@ numpy==1.22.2
     #   scikit-learn
     #   scipy
 openpyxl==3.0.9
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 packaging==21.3
     # via
     #   bleach
@@ -287,13 +287,13 @@ pyrsistent==0.18.1
     # via jsonschema
 pytest==6.2.5
     # via
-    #   -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    #   -r requirements.in
     #   pytest-cov
     #   pytest-mock
 pytest-cov==3.0.0
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 pytest-mock==1.13.0
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 python-dateutil==2.8.2
     # via
     #   arrow
@@ -331,7 +331,7 @@ requests==2.25.1
 rope==0.21.1
     # via kedro
 scikit-learn==0.24.2 ; python_version == "3.8"
-    # via -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    # via -r requirements.in
 scipy==1.8.0
     # via scikit-learn
 send2trash==1.8.0
@@ -400,7 +400,7 @@ websocket-client==1.2.3
     # via jupyter-server
 wheel==0.36.2
     # via
-    #   -r /home/diego/projetos/src/github.com/DiegoSantosWS/studingkedro/spaceflights/src/requirements.in
+    #   -r requirements.in
     #   pip-tools
 widgetsnbextension==3.5.2
     # via ipywidgets
